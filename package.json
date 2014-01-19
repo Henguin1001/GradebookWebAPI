@@ -1,5 +1,5 @@
 {
-  "name": "GradeBookWebApi",
+  "name": "GradebookWebAPI",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,15 +7,6 @@
   },
   "dependencies": {
     "express": "3.4.5",
-  },
-  "description": "a web api using the gradebook module",
-  "main": "app.js",
-  "devDependencies": {},
-  "keywords": [
-    "gradebook"
-  ],
-  "engines": {
-    "node": "0.10.x"
+    "jade": "*"
   }
-  "author": "Henry Troutman"
 }
