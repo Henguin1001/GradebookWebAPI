@@ -7,6 +7,6 @@
   },
   "dependencies": {
     "express": "3.4.5",
-    "gradebook": ">= 0.0.5"
+    "gradebook": ">= 0.0.6"
   }
 }

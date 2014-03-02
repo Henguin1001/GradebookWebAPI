@@ -9,10 +9,15 @@ exports.index = function(req, res) {
 						if (!err) {
 							gradebook.getAssignments(grade_data, function(err, grades_assignments_data) {
 								if (!err) {
-									console.log(grades_assignments_data);
+									grade_data = grade_data.map(function(element,index){
+										element.firstSemester.assignments = grades_assignments_data[index].firstSemester;
+										element.secondSemester.assignments = grades_assignments_data[index].secondSemester;
+										return element;
+
+									});
 									res.end(JSON.stringify({
 										"default": default_data,
-										"courses": grades_assignments_data,
+										"courses": grade_data,
 									}));
 								} else res.end(JSON.stringify({
 									"default": default_data,
