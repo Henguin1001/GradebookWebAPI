@@ -9,6 +9,7 @@ exports.index = function(req, res) {
 						if (!err) {
 							gradebook.getAssignments(grade_data, function(err, grades_assignments_data) {
 								if (!err) {
+									console.log(grades_assignments_data);
 									res.end(JSON.stringify({
 										"default": default_data,
 										"courses": grades_assignments_data,
